@@ -1,5 +1,25 @@
 # GitHub Actions Kubernetes Masterclass – Complete Project Documentation
 
+| Task No. | Section                        | Summary                                                    | Quick Link                                                              |
+| -------- | ------------------------------ | ---------------------------------------------------------- | ----------------------------------------------------------------------- |
+| 1        | Project Overview               | Introduction to SkillPulse application and DevOps workflow | [Go to Project Overview](#project-overview)                             |
+| 2        | Technologies Used              | Tools and technologies used in the project                 | [Go to Technologies Used](#technologies-used)                           |
+| 3        | Repository Setup               | Forking and cloning the GitHub repository                  | [Go to Repository Setup](#repository-setup)                             |
+| 4        | GitHub Secrets Configuration   | Configured Docker Hub secrets and deployment variables     | [Go to GitHub Secrets Configuration](#github-secrets-configuration)     |
+| 5        | Enable GitHub Actions          | Enabled workflows for the forked repository                | [Go to Enable GitHub Actions](#enable-github-actions)                   |
+| 6        | CI/CD Pipeline Setup           | Triggered GitHub Actions pipeline using Git commits        | [Go to CI/CD Pipeline Setup](#cicd-pipeline-setup)                      |
+| 7        | GitHub Actions Validation      | Verified Docker build and push workflow success            | [Go to GitHub Actions Validation](#github-actions-validation)           |
+| 8        | Install Kubernetes Tools       | Installed `kind` and `kubectl` tools                       | [Go to Install Kubernetes Tools](#install-kubernetes-tools)             |
+| 9        | ARM64 Troubleshooting          | Fixed architecture compatibility issue in WSL2             | [Go to ARM64 Troubleshooting](#arm64-troubleshooting)                   |
+| 10       | Create Kubernetes Cluster      | Created Kubernetes cluster using `make up`                 | [Go to Create Kubernetes Cluster](#create-kubernetes-cluster)           |
+| 11       | Kubernetes Verification        | Verified nodes, pods, and services                         | [Go to Kubernetes Verification](#kubernetes-verification)               |
+| 12       | Application Deployment Testing | Tested frontend deployment in browser                      | [Go to Application Deployment Testing](#application-deployment-testing) |
+| 13       | Health Check Validation        | Verified backend health endpoint                           | [Go to Health Check Validation](#health-check-validation)               |
+| 14       | Final Results                  | Confirmed successful CI/CD and Kubernetes deployment       | [Go to Final Results](#final-results)                                   |
+| 15       | Key Learnings                  | Important DevOps and Kubernetes concepts learned           | [Go to Key Learnings](#key-learnings)                                   |
+| 16       | Conclusion                     | Final project completion summary                           | [Go to Conclusion](#conclusion)                                         |
+
+
 ## Project Overview
 
 This project demonstrates a complete DevOps workflow using:
@@ -86,7 +106,7 @@ github-actions-kubernetes-masterclass/
 
 # Step 1 – Fork Repository
 
-Forked repository from:
+Forked and customized from:
 
 ```text
 LondheShubham153/github-actions-kubernetes-masterclass
@@ -146,6 +166,7 @@ git push origin main
 
 ---
 
+<img src="./screenshots/Docker-CICD.png" width="400">
 
 
 # Step 5 – GitHub Actions Pipeline Success
@@ -163,6 +184,8 @@ GitHub Actions status:
 ```text
 SUCCESS ✅
 ```
+<img src="./screenshots/localhost.png" width="400">
+
 
 ---
 
@@ -247,9 +270,10 @@ kubectl get nodes
 Output:
 
 ```text
-skillpulse-control-plane
-skillpulse-worker
-skillpulse-worker2
+NAME                       STATUS   ROLES           AGE     VERSION
+skillpulse-control-plane   Ready    control-plane   2m39s   v1.35.1
+skillpulse-worker          Ready    <none>          2m24s   v1.35.1
+skillpulse-worker2         Ready    <none>          2m24s   v1.35.1
 ```
 
 ## Pods
@@ -261,9 +285,10 @@ kubectl get pods -n skillpulse
 Output:
 
 ```text
-backend Running
-frontend Running
-mysql Running
+NAME                        READY   STATUS    RESTARTS   AGE
+backend-fb779cd7c-dbkjl     1/1     Running   0          2m25s
+frontend-76b7d9db7c-d9l5h   1/1     Running   0          2m25s
+mysql-0                     1/1     Running   0          2m26s
 ```
 
 ## Services
@@ -275,9 +300,10 @@ kubectl get svc -n skillpulse
 Output:
 
 ```text
-backend ClusterIP
-frontend NodePort
-mysql ClusterIP
+NAME       TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+backend    ClusterIP   10.96.64.0     <none>        8080/TCP       2m33s
+frontend   NodePort    10.96.96.218   <none>        80:30080/TCP   2m32s
+mysql      ClusterIP   None           <none>        3306/TCP       2m33s
 ```
 
 ---
@@ -289,6 +315,8 @@ Opened application:
 ```text
 http://localhost:8888
 ```
+<img src="./screenshots/kind.png" width="400">
+
 
 Application loaded successfully.
 
@@ -360,5 +388,6 @@ The application was deployed successfully and verified through browser testing a
 # Project Status
 
 ```text
-COMPLETED SUCCESSFULLY ✅
+COMPLETED SUCCESSFULLY
 ```
+

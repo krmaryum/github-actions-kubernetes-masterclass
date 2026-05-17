@@ -418,4 +418,42 @@ E0517 02:24:55.821934   31377 memcache.go:265] "Unhandled Error" err="couldn't g
 E0517 02:24:55.823205   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
 E0517 02:24:55.824253   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
 The connection to the server localhost:8080 was refused - did you specify the right host or port?
-[?2004h]0;khalid@Khalid-laptop: ~/shubham/megapro
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mdocker ps[27m[C[C[C[Cdocker ps
+[?2004lCONTAINER ID   IMAGE                              COMMAND                  CREATED        STATUS                 PORTS                                             NAMES
+baffa410875d   krmaryum/task-manager-api:latest   "docker-entrypoint.s…"   2 months ago   Up 2 hours             0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp       task-manager-app
+0c3a705d4731   mongo:7                            "docker-entrypoint.s…"   2 months ago   Up 2 hours (healthy)   0.0.0.0:27017->27017/tcp, [::]:27017->27017/tcp   task-manager-mongo
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mdocker stop task-manager-app task-manager-mongo[27m[C[C[C[Cdocker stop task-manager-app task-manager-mongo
+[?2004ltask-manager-app
+task-manager-mongo
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mdocker ps[27m[C[C[C[Cdocker ps
+[?2004lCONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mcurl http://localhost:8888/health[27m[C[C[C[Ccurl http://localhost:8888/health
+[?2004lcurl: (7) Failed to connect to localhost port 8888 after 2 ms: Couldn't connect to server
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mgit status[27m[C[C[C[Cgit status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   mega.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git add mega.txt 
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git commit -m ""C"l"e"a"n"u"p"[C
+[?2004l[main aef69ee] Cleanup
+ 1 file changed, 105 insertions(+), 1 deletion(-)
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git push
+[?2004lEnumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 2.34 KiB | 599.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To github.com:krmaryum/github-actions-kubernetes-masterclass.git
+   414a3ad..aef69ee  main -> main
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ exit
+[?2004lexit
+
+Script done on 2026-05-17 02:28:02-05:00 [COMMAND_EXIT_CODE="0"]
