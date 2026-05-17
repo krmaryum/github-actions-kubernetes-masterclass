@@ -314,4 +314,108 @@ drwxr-xr-x 2 khalid khalid  4096 May 17 02:14 [01;34mscreenshots[0m
 -rw-r--r-- 1 khalid khalid  2035 May 16 23:53 Makefile
 -rw-r--r-- 1 khalid khalid 20470 May 16 23:53 README.md
 drwxr-xr-x 5 khalid khalid  4096 May 16 23:53 [0m[01;34mbackend[0m
--rw-r--r-- 1 
+-rw-r--r-- 1 khalid khalid  1209 May 16 23:53 docker-compose.yml
+drwxr-xr-x 2 khalid khalid  4096 May 16 23:53 [01;34mdocs[0m
+drwxr-xr-x 4 khalid khalid  4096 May 16 23:53 [01;34mfrontend[0m
+drwxr-xr-x 2 khalid khalid  4096 May 16 23:53 [01;34mk8s[0m
+drwxr-xr-x 4 khalid khalid  4096 May 17 02:15 [01;34mmega-project[0m
+-rw-r--r-- 1 khalid khalid 49152 May 17 01:16 mega.txt
+drwxr-xr-x 2 khalid khalid  4096 May 16 23:53 [01;34mmysql[0m
+-rw-r--r-- 1 khalid khalid    22 May 17 00:34 test.md
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mmega-project/[m
+	[31mmega.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git add .
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git commit -m ""M"e"g"a"-"P"r"o"j"e"c"t" "s"u"b"m"i"s"s"i"o"n"
+[?2004l[main 414a3ad] Mega-Project submission
+ 7 files changed, 996 insertions(+)
+ create mode 100644 mega-project/day-72-mega-project-mcqs.html
+ create mode 100644 mega-project/github-actions-kubernetes-masterclass-documentation.md
+ create mode 100644 mega-project/screenshots/Docker-CICD.png
+ create mode 100644 mega-project/screenshots/git-actions-a.png
+ create mode 100644 mega-project/screenshots/kind.png
+ create mode 100644 mega-project/screenshots/localhost.png
+ create mode 100644 mega.txt
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git push
+[?2004lEnumerating objects: 12, done.
+Counting objects:   8% (1/12)Counting objects:  16% (2/12)Counting objects:  25% (3/12)Counting objects:  33% (4/12)Counting objects:  41% (5/12)Counting objects:  50% (6/12)Counting objects:  58% (7/12)Counting objects:  66% (8/12)Counting objects:  75% (9/12)Counting objects:  83% (10/12)Counting objects:  91% (11/12)Counting objects: 100% (12/12)Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects:   9% (1/11)Compressing objects:  18% (2/11)Compressing objects:  27% (3/11)Compressing objects:  36% (4/11)Compressing objects:  45% (5/11)Compressing objects:  54% (6/11)Compressing objects:  63% (7/11)Compressing objects:  72% (8/11)Compressing objects:  81% (9/11)Compressing objects:  90% (10/11)Compressing objects: 100% (11/11)Compressing objects: 100% (11/11), done.
+Writing objects:   9% (1/11)Writing objects:  18% (2/11)Writing objects:  27% (3/11)Writing objects:  36% (4/11)Writing objects:  45% (5/11)Writing objects:  54% (6/11)Writing objects:  63% (7/11)Writing objects:  72% (8/11)Writing objects:  81% (9/11)Writing objects:  90% (10/11)Writing objects: 100% (11/11)Writing objects: 100% (11/11), 742.22 KiB | 20.06 MiB/s, done.
+Total 11 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To github.com:krmaryum/github-actions-kubernetes-masterclass.git
+   5a514ce..414a3ad  main -> main
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mkind delete cluster --name skillpulse[27m[C[C[C[Ckind delete cluster --name skillpulse
+[?2004lDeleting cluster "skillpulse" ...
+Deleted nodes: ["skillpulse-worker2" "skillpulse-worker" "skillpulse-control-plane"]
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mdocker compose down -v[27m[C[C[C[Cdocker compose down -v
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mdocker system prune -f[27m[C[C[C[Cdocker system prune -f
+[?2004lDeleted Networks:
+task-3_task-manager-network
+kind
+
+Deleted build cache objects:
+3f0owuq8lifh06bmvcxk6hysk
+xa8sac5wbd2bqm856azze3bak
+squzbrp4kd85vmkho3eb0c7zi
+xwpqzeyx3zvag8qosji7ut6yd
+a6cj1zmcyu9z5sp0uox4vwadr
+th02s7ib6ik2tt5h9dc1he8g4
+ouvq6ugbl9faj32khzx7a4reg
+wv62zja1y0mxh3549ec8irlwc
+8buh2wq2qn4dnl7zg9kuxbef0
+legb0rhp94q1v6qq8lgm0ogff
+ybst1dh5ecxc6l244jf4p1p2g
+jbxetwixs092am1wal40yfnip
+co0lg3i6sfqtal214jwljzp6d
+c5sq2nc6i5148s0s5loo0khzn
+w1hfa7zeajjdl42qh2uz0otzn
+zc8h9fjq0za0n2ts619bzvf2v
+w4gwf8gm8d0wqxogmmt6xbfpy
+j13l0nyc8umqovpzwx1qwzik3
+8pq9ow6s6eg88rsll80spcile
+w9ey55yg1gforl0n59yb94wps
+7t7g0g7aij0p9w8jmrkgf853h
+z0p84h7ppahx05r2b9vza6aqu
+yhxad2m3i03d4sgr54odhnjce
+vdxerw1f68532piiuld36npu6
+v4uhfpwas542wrmutkyktkn71
+usrceufhdjjrfvz55l7yyj8oe
+6s48ylyhq831ct1jw0wqpvuqn
+hjjmp13a1hits0ckni0sgzrce
+5za3finmw8vju32coy1yirdp8
+0wyjr7z655725m23wssqokr6k
+1qwhkycxofh9zaf4z41f0dvou
+ycyj2b296z6xd5equn749s9ma
+0guvondvaqvra5k9goxgfqtjw
+mkwi4a7pgpqrfnbrsk4pjovuk
+
+Total reclaimed space: 968.5MB
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mgit status[27m[C[C[C[Cgit status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   mega.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mkind get clusters[27m[C[C[C[Ckind get clusters
+[?2004lNo kind clusters found.
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mkubectl get nodes[27m[C[C[C[Ckubectl get nodes
+[?2004lE0517 02:24:55.809616   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0517 02:24:55.819798   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0517 02:24:55.821934   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0517 02:24:55.823205   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0517 02:24:55.824253   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megapro
